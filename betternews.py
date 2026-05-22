@@ -3,7 +3,7 @@ import sys
 
 
 def news(sort,inc,lang,pagee,howmany,wantcontent):
-    url = f"https://newsapi.org/v2/everything?"
+    url = f"https://newsapi.org/v2/everything"
     param = {
         "apiKey": "your api key hereee",
         "sortBy": sort,
@@ -42,13 +42,13 @@ if(filters.lower()=="on" or filters.lower()=="yes" or filters.lower()=="filterso
             sort=int(input("How to sort \nPress 1 to sort by relevence \nPress 2 to sort by popularity \nPress 3 to sort by date\nNote default is relevence\n"))
             sortt="";
             if(sort==1):
-                sorttt="relevancy"
+                sortt="relevancy"
             elif(sort==2):
                 sortt="popularity"
             elif(sort==3):
                 sortt="publishedAt"
             else:
-                sort="relevency"
+                sortt="relevency"
 
             language=input("Enter 2 digits iso code of language \n")
             page=int(input("What page results you want?"))
@@ -61,9 +61,9 @@ if(filters.lower()=="on" or filters.lower()=="yes" or filters.lower()=="filterso
                     sys.exit();
             a=False;
             content=input("should content be on?")
-            if(content.lower()=="on","yes"):
+            if(content.lower() in ["on","yes"]):
                 a=True;
-            elif(content.lower()=="off","no"):
+            elif(content.lower() in ["off","no"]):
                 a=False;
             else:
                 print("Invalid choice.... \n Shutting down...")
