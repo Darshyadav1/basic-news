@@ -1,5 +1,7 @@
 # 📰 Real-Time News Fetcher
 
+[WEBSITE LINK](https://articlefetcher.streamlit.app/)
+
 A lightweight, dynamic web application built with Streamlit that interacts with the NewsAPI to search, filter, and display the latest global news articles. 
 
 ## 🚀 Features
