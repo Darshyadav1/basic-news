@@ -1,3 +1,6 @@
+'''
+old code
+new code have been moved to stnews.py
 import requests
 import sys
 
@@ -78,4 +81,4 @@ else:
 
 
 
- news("relevency",search,"en",1,7,False)
+ news("relevency",search,"en",1,7,False)'''
