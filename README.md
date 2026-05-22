@@ -1,22 +1,30 @@
-# CLI News Fetcher
+# 📰 Real-Time News Fetcher
 
-A dynamic, interactive Python command-line application that interacts with the **News API v2 (`/everything` endpoint)** to fetch, filter, and read live news articles from across the web.
+A lightweight, dynamic web application built with Streamlit that interacts with the NewsAPI to search, filter, and display the latest global news articles. 
 
 ## 🚀 Features
-- **Interactive Search:** Allows users to input any custom search term dynamically.
-- **Custom Filtering Engine:** Optional configuration settings toggled directly through user inputs.
-- **Advanced Sorting:** Sort results dynamically by `relevancy`, `popularity`, or `publishedAt` dates.
-- **Pagination & Limits:** Set exact target page results and control the payload volume (total articles returned).
-- **Graceful Error Handling:** Implements `try-except` blocks for network requests and input validation routines via `sys.exit`.
+* **Live Search:** Query thousands of global news sources instantly using custom search terms.
+* **Advanced Filters:** Toggleable advanced options to narrow down your results:
+  * Sort articles by **Popularity**, **Relevancy**, or **Published Date**.
+  * Pagination support to fetch specific page results.
+  * Custom result limits (display anywhere from 5 to 50 articles at once).
+* **Detailed Content Mode:** A toggle checkbox to reveal deep text summaries/content of the articles alongside titles and descriptions.
+* **Direct Redirection:** Clean Markdown links that take you straight to the original publishing website.
+* **Robust Error Handling:** Built-in safeguards against empty searches, API response failures, and network connection issues.
 
-## 🛠️ Tech Stack & Requirements
-- **Language:** Python 3.x
-- **Libraries Used:** `requests` (HTTP client), `sys` (system exit handles)
+## 🛠️ Tech Stack
+* **Frontend UI:** [Streamlit](https://streamlit.io/)
+* **Data Fetching:** [Requests Library (Python)](https://requests.readthedocs.io/)
+* **API Source:** [NewsAPI](https://newsapi.org/)
 
 ## 📦 Installation & Setup
 
-1. **Clone the repository:**
-   
+Follow these steps to get a local copy of this project running on your computer.
+
+### Prerequisite
+Make sure you have Python installed on your system.
+
+### 1. Clone the Repository
 ```bash
-   git clone [https://github.com/Darsh/basic-news.git](https://github.com/Darsh/basic-news.git)
-   cd basic-news
+git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
+cd YOUR_REPOSITORY_NAME
