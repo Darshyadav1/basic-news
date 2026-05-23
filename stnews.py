@@ -4,6 +4,12 @@ import time
 
 #sort,news,en,page,pageee,want
 
+st.set_page_config(
+    page_title="Article fetcher",  # Changes the text on the browser tab
+    page_icon="⚡",                        # Changes the tiny favicon tab icon (can use emojis!)
+    layout="centered"                      # Can be "centered" or "wide"
+)
+
 
 
 with st.spinner("Refreshing components..."):
