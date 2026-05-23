@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import time
+from google import genai
 
 #sort,news,en,page,pageee,want
 
@@ -19,8 +20,10 @@ with st.spinner("Refreshing components..."):
 
     st.header("Your latest news updated here")
     news = st.text_input("Search",placeholder="Enter your search queue here", icon=":material/search:")
-
+    adai= st.checkbox("Enable smart Ai summary")
     userf = st.checkbox("Enable advance filters")
+
+    
 
 
     sortt=""
@@ -65,6 +68,17 @@ with st.spinner("Refreshing components..."):
                     data=res.json()
                     ar=data.get("articles",[])
                     st.success(f"Total results are {data.get('totalResults',0)} out of which showing {len(ar)}")
+
+                    if adai:
+                        with st.spinner("Generating ai summery"):
+                            client = genai.Client(api_key="AIzaSyBM0TUfn-9_87RuIFqhTVaw-ElRYb8tf-M")
+                            response = client.models.generate_content(model="gemini-3.1-flash-lite", contents=f"give very short latest news about {news}")
+                            st.header(response.text)
+                            st.toast("Ai summary generated succesfully", icon="✅")
+                            st.write("------------------Featched articles below---------------------------")
+                            st.divider()
+                            st.divider()
+                            st.divider()
                     
                     for i,article in enumerate(ar[:pageee + 1],1):
                         st.divider()
